@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>สอนพิเศษ – จองเรียนพิเศษสำหรับนักเรียน</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap"><span class="logo">Fast Teach</span><span class="navs">สำหรับนักเรียนและผู้ปกครอง</span></div></nav>
+<section class="hero"><div class="wrap"><h1><span>หาครูสอนพิเศษ</span> ในจังหวัดของคุณ</h1>
+<p>เลือกจังหวัดและวิชา เปรียบเทียบราคาต่อชั่วโมง แล้วจองครูได้ทันที</p>
+</div></section>
+<div class="wrap lay">
+<aside><div class="filter-tools"><label class="searchbox"><span class="sr-only">ค้นหาชื่อครู วิชา หรือคำที่เกี่ยวข้อง</span><input id="search" type="search" placeholder="ค้นหาชื่อครู วิชา หรือสถาบัน..." autocomplete="off"><span aria-hidden="true">⌕</span></label><label class="sortbox"><span class="sr-only">เรียงลำดับครู</span><select id="sort"><option value="default">เรียงตามค่าเริ่มต้น</option><option value="price">ราคาต่ำสุดก่อน</option><option value="rating">คะแนนสูงสุดก่อน</option></select></label><button id="favorites-filter" class="favorites-filter" type="button" aria-pressed="false">♡ รายการโปรด</button></div><div class="g"><h2>จังหวัดที่อยู่</h2><select id="prov" aria-label="จังหวัด"><option value="">– ทุกจังหวัด –</option><option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option><option value="เชียงใหม่">เชียงใหม่</option><option value="ลำพูน">ลำพูน</option><option value="ขอนแก่น">ขอนแก่น</option><option value="ชลบุรี">ชลบุรี</option><option value="นครราชสีมา">นครราชสีมา</option><option value="สงขลา">สงขลา</option><option value="ภูเก็ต">ภูเก็ต</option><option value="เชียงราย">เชียงราย</option><option value="อุดรธานี">อุดรธานี</option></select></div>
+<div class="g"><h2>วิชาที่ต้องการเรียน</h2><div class="subject-nav"><button class="scroll-subject prev" type="button" aria-label="เลื่อนวิชาไปทางซ้าย">‹</button><div class="chips" id="subjects"><label class="chip"><input type="radio" name="s" id="s-all" checked>ทุกวิชา</label><label class="chip"><input type="radio" name="s" id="s-m">คณิตศาสตร์</label><label class="chip"><input type="radio" name="s" id="s-sci">วิทยาศาสตร์</label><label class="chip"><input type="radio" name="s" id="s-en">ภาษาอังกฤษ</label><label class="chip"><input type="radio" name="s" id="s-th">ภาษาไทย</label><label class="chip"><input type="radio" name="s" id="s-phy">ฟิสิกส์</label><label class="chip"><input type="radio" name="s" id="s-chem">เคมี</label></div><button class="scroll-subject next" type="button" aria-label="เลื่อนวิชาไปทางขวา">›</button></div></div>
+<div class="g"><h2>รูปแบบการเรียน</h2><div class="chips"><label class="chip"><input type="radio" name="f" id="f-all" checked>ทั้งหมด</label><label class="chip"><input type="radio" name="f" id="f-p">เรียนส่วนตัว</label><label class="chip"><input type="radio" name="f" id="f-c">ที่สถาบัน</label></div></div></aside>
+<section><p class="count" id="count"></p>
+<div class="grid">
+<article class="t" data-prov="กรุงเทพมหานคร" data-subs="m phy" data-modes="p c">
+<div class="cover" style="background:#DCE2FF"><span class="em"></span><span class="rate">4.9</span></div>
+<div class="body"><div><h3>ครูสมศรี ใจดี</h3><div class="meta">กรุงเทพมหานคร · ประสบการณ์ 12 ปี</div></div>
+<div class="tags"><span class="tag">คณิตศาสตร์</span><span class="tag">ฟิสิกส์</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿600<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>สถาบันปัญญาพัฒน์ สาขาลาดพร้าว</small></span><b class="price">฿350<small>/ชม.</small></b></div></div>
+<a class="book" href="#book0">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="กรุงเทพมหานคร" data-subs="en" data-modes="p">
+<div class="cover" style="background:#FFE5D0"><span class="em"></span><span class="rate">4.8</span></div>
+<div class="body"><div><h3>ครูวิภา รัตนกุล</h3><div class="meta">กรุงเทพมหานคร · ประสบการณ์ 9 ปี</div></div>
+<div class="tags"><span class="tag">ภาษาอังกฤษ</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿700<small>/ชม.</small></b></div><div class="mode off"><span>เรียนที่สถาบัน<small>ไม่เปิดสอน</small></span></div></div>
+<a class="book" href="#book1">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="กรุงเทพมหานคร" data-subs="chem sci" data-modes="c">
+<div class="cover" style="background:#FFF1BF"><span class="em"></span><span class="rate">4.9</span></div>
+<div class="body"><div><h3>ครูธนพล สุวรรณ</h3><div class="meta">กรุงเทพมหานคร · ประสบการณ์ 15 ปี</div></div>
+<div class="tags"><span class="tag">เคมี</span><span class="tag">วิทยาศาสตร์</span></div>
+<div class="modes"><div class="mode off"><span>เรียนส่วนตัว<small>ไม่เปิดสอน</small></span></div><div class="mode"><span>เรียนที่สถาบัน<small>ติวเตอร์เฮาส์ สยาม</small></span><b class="price">฿400<small>/ชม.</small></b></div></div>
+<a class="book" href="#book2">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="เชียงใหม่" data-subs="m sci" data-modes="p c">
+<div class="cover" style="background:#DCE2FF"><span class="em"></span><span class="rate">4.7</span></div>
+<div class="body"><div><h3>ครูนภัส แก้วมณี</h3><div class="meta">เชียงใหม่ · ประสบการณ์ 8 ปี</div></div>
+<div class="tags"><span class="tag">คณิตศาสตร์</span><span class="tag">วิทยาศาสตร์</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿450<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>กวดวิชาล้านนา นิมมาน</small></span><b class="price">฿280<small>/ชม.</small></b></div></div>
+<a class="book" href="#book3">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="เชียงใหม่" data-subs="th en" data-modes="p">
+<div class="cover" style="background:#FFE0EC"><span class="em"></span><span class="rate">4.8</span></div>
+<div class="body"><div><h3>ครูอรุณี ศรีสุข</h3><div class="meta">เชียงใหม่ · ประสบการณ์ 11 ปี</div></div>
+<div class="tags"><span class="tag">ภาษาไทย</span><span class="tag">ภาษาอังกฤษ</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿500<small>/ชม.</small></b></div><div class="mode off"><span>เรียนที่สถาบัน<small>ไม่เปิดสอน</small></span></div></div>
+<a class="book" href="#book4">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="ลำพูน" data-subs="m phy" data-modes="p c">
+<div class="cover" style="background:#DCE2FF"><span class="em"></span><span class="rate">4.8</span></div>
+<div class="body"><div><h3>ครูสุรชัย มั่นคง</h3><div class="meta">ลำพูน · ประสบการณ์ 10 ปี</div></div>
+<div class="tags"><span class="tag">คณิตศาสตร์</span><span class="tag">ฟิสิกส์</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿400<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>กวดวิชาลำพูนพัฒนา</small></span><b class="price">฿250<small>/ชม.</small></b></div></div>
+<a class="book" href="#book5">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="ลำพูน" data-subs="en th" data-modes="p c">
+<div class="cover" style="background:#FFE5D0"><span class="em"></span><span class="rate">4.6</span></div>
+<div class="body"><div><h3>ครูกัลยา ทองคำ</h3><div class="meta">ลำพูน · ประสบการณ์ 7 ปี</div></div>
+<div class="tags"><span class="tag">ภาษาอังกฤษ</span><span class="tag">ภาษาไทย</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿350<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>กวดวิชาลำพูนพัฒนา</small></span><b class="price">฿220<small>/ชม.</small></b></div></div>
+<a class="book" href="#book6">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="ขอนแก่น" data-subs="chem phy" data-modes="p c">
+<div class="cover" style="background:#FFF1BF"><span class="em"></span><span class="rate">4.9</span></div>
+<div class="body"><div><h3>ครูพิชัย วงศ์ไทย</h3><div class="meta">ขอนแก่น · ประสบการณ์ 13 ปี</div></div>
+<div class="tags"><span class="tag">เคมี</span><span class="tag">ฟิสิกส์</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿550<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>สถาบันอีสานติว</small></span><b class="price">฿320<small>/ชม.</small></b></div></div>
+<a class="book" href="#book7">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="ขอนแก่น" data-subs="m" data-modes="c">
+<div class="cover" style="background:#DCE2FF"><span class="em"></span><span class="rate">4.6</span></div>
+<div class="body"><div><h3>ครูมาลี สุขสันต์</h3><div class="meta">ขอนแก่น · ประสบการณ์ 6 ปี</div></div>
+<div class="tags"><span class="tag">คณิตศาสตร์</span></div>
+<div class="modes"><div class="mode off"><span>เรียนส่วนตัว<small>ไม่เปิดสอน</small></span></div><div class="mode"><span>เรียนที่สถาบัน<small>สถาบันอีสานติว</small></span><b class="price">฿300<small>/ชม.</small></b></div></div>
+<a class="book" href="#book8">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="ชลบุรี" data-subs="en sci" data-modes="p c">
+<div class="cover" style="background:#FFE5D0"><span class="em"></span><span class="rate">4.7</span></div>
+<div class="body"><div><h3>ครูจิราพร ดวงดี</h3><div class="meta">ชลบุรี · ประสบการณ์ 9 ปี</div></div>
+<div class="tags"><span class="tag">ภาษาอังกฤษ</span><span class="tag">วิทยาศาสตร์</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿500<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>ตะวันออกติวเตอร์</small></span><b class="price">฿300<small>/ชม.</small></b></div></div>
+<a class="book" href="#book9">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="นครราชสีมา" data-subs="m chem" data-modes="p c">
+<div class="cover" style="background:#DCE2FF"><span class="em"></span><span class="rate">4.8</span></div>
+<div class="body"><div><h3>ครูวรพจน์ เกียรติ</h3><div class="meta">นครราชสีมา · ประสบการณ์ 14 ปี</div></div>
+<div class="tags"><span class="tag">คณิตศาสตร์</span><span class="tag">เคมี</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿500<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>โคราชแอคเดมี</small></span><b class="price">฿300<small>/ชม.</small></b></div></div>
+<a class="book" href="#book10">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="สงขลา" data-subs="th en" data-modes="p">
+<div class="cover" style="background:#FFE0EC"><span class="em"></span><span class="rate">4.7</span></div>
+<div class="body"><div><h3>ครูสุภาภรณ์ ชัยชนะ</h3><div class="meta">สงขลา · ประสบการณ์ 10 ปี</div></div>
+<div class="tags"><span class="tag">ภาษาไทย</span><span class="tag">ภาษาอังกฤษ</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿450<small>/ชม.</small></b></div><div class="mode off"><span>เรียนที่สถาบัน<small>ไม่เปิดสอน</small></span></div></div>
+<a class="book" href="#book11">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="ภูเก็ต" data-subs="phy m" data-modes="p c">
+<div class="cover" style="background:#E3DBFF"><span class="em"></span><span class="rate">4.7</span></div>
+<div class="body"><div><h3>ครูอนุชา พงษ์ศิริ</h3><div class="meta">ภูเก็ต · ประสบการณ์ 8 ปี</div></div>
+<div class="tags"><span class="tag">ฟิสิกส์</span><span class="tag">คณิตศาสตร์</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿600<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>ภูเก็ตติวสถาบัน</small></span><b class="price">฿380<small>/ชม.</small></b></div></div>
+<a class="book" href="#book12">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="เชียงราย" data-subs="sci chem" data-modes="p c">
+<div class="cover" style="background:#D3F3E6"><span class="em"></span><span class="rate">4.8</span></div>
+<div class="body"><div><h3>ครูรัตนา บุญเรือง</h3><div class="meta">เชียงราย · ประสบการณ์ 12 ปี</div></div>
+<div class="tags"><span class="tag">วิทยาศาสตร์</span><span class="tag">เคมี</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿420<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>เชียงรายติวเตอร์</small></span><b class="price">฿260<small>/ชม.</small></b></div></div>
+<a class="book" href="#book13">จองครูท่านนี้</a></div></article>
+<article class="t" data-prov="อุดรธานี" data-subs="m en" data-modes="p c">
+<div class="cover" style="background:#DCE2FF"><span class="em"></span><span class="rate">4.6</span></div>
+<div class="body"><div><h3>ครูดวงพร สายทอง</h3><div class="meta">อุดรธานี · ประสบการณ์ 9 ปี</div></div>
+<div class="tags"><span class="tag">คณิตศาสตร์</span><span class="tag">ภาษาอังกฤษ</span></div>
+<div class="modes"><div class="mode"><span>เรียนส่วนตัว<small>ตัวต่อตัว</small></span><b class="price">฿400<small>/ชม.</small></b></div><div class="mode"><span>เรียนที่สถาบัน<small>อุดรกวดวิชา</small></span><b class="price">฿250<small>/ชม.</small></b></div></div>
+<a class="book" href="#book14">จองครูท่านนี้</a></div></article>
+<div class="empty" id="empty">ยังไม่มีครูตามเงื่อนไขที่เลือก<br>ลองเลือก “ทุกวิชา” หรือเปลี่ยนจังหวัด</div>
+</div>
+<p class="note">ข้อมูลครูและราคาในหน้านี้เป็นตัวอย่างสำหรับการสาธิต</p></section></div>
+<div class="modal" id="book0"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูสมศรี ใจดี</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูสมศรี ใจดี">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿600/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>สถาบันปัญญาพัฒน์ สาขาลาดพร้าว</small></span><b class="price">฿350/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>คณิตศาสตร์</option><option>ฟิสิกส์</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book1"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูวิภา รัตนกุล</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูวิภา รัตนกุล">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿700/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>ภาษาอังกฤษ</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book2"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูธนพล สุวรรณ</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูธนพล สุวรรณ">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="สถาบัน" checked><span>ที่สถาบัน<small>ติวเตอร์เฮาส์ สยาม</small></span><b class="price">฿400/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>เคมี</option><option>วิทยาศาสตร์</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book3"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูนภัส แก้วมณี</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูนภัส แก้วมณี">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿450/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>กวดวิชาล้านนา นิมมาน</small></span><b class="price">฿280/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>คณิตศาสตร์</option><option>วิทยาศาสตร์</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book4"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูอรุณี ศรีสุข</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูอรุณี ศรีสุข">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿500/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>ภาษาไทย</option><option>ภาษาอังกฤษ</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book5"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูสุรชัย มั่นคง</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูสุรชัย มั่นคง">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿400/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>กวดวิชาลำพูนพัฒนา</small></span><b class="price">฿250/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>คณิตศาสตร์</option><option>ฟิสิกส์</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book6"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูกัลยา ทองคำ</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูกัลยา ทองคำ">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿350/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>กวดวิชาลำพูนพัฒนา</small></span><b class="price">฿220/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>ภาษาอังกฤษ</option><option>ภาษาไทย</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book7"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูพิชัย วงศ์ไทย</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูพิชัย วงศ์ไทย">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿550/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>สถาบันอีสานติว</small></span><b class="price">฿320/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>เคมี</option><option>ฟิสิกส์</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book8"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูมาลี สุขสันต์</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูมาลี สุขสันต์">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="สถาบัน" checked><span>ที่สถาบัน<small>สถาบันอีสานติว</small></span><b class="price">฿300/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>คณิตศาสตร์</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book9"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูจิราพร ดวงดี</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูจิราพร ดวงดี">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿500/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>ตะวันออกติวเตอร์</small></span><b class="price">฿300/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>ภาษาอังกฤษ</option><option>วิทยาศาสตร์</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book10"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูวรพจน์ เกียรติ</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูวรพจน์ เกียรติ">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿500/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>โคราชแอคเดมี</small></span><b class="price">฿300/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>คณิตศาสตร์</option><option>เคมี</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book11"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูสุภาภรณ์ ชัยชนะ</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูสุภาภรณ์ ชัยชนะ">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿450/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>ภาษาไทย</option><option>ภาษาอังกฤษ</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book12"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูอนุชา พงษ์ศิริ</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูอนุชา พงษ์ศิริ">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿600/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>ภูเก็ตติวสถาบัน</small></span><b class="price">฿380/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>ฟิสิกส์</option><option>คณิตศาสตร์</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book13"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูรัตนา บุญเรือง</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูรัตนา บุญเรือง">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿420/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>เชียงรายติวเตอร์</small></span><b class="price">฿260/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>วิทยาศาสตร์</option><option>เคมี</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="book14"><div class="dlg"><a class="x" href="#" aria-label="ปิด">✕</a>
+<h2>จองเรียนกับครูดวงพร สายทอง</h2>
+<form action="#ok" method="get"><input type="hidden" name="teacher" value="ครูดวงพร สายทอง">
+<fieldset><legend>รูปแบบการเรียน</legend><label class="mode"><input type="radio" name="mode" value="ส่วนตัว" checked><span>เรียนส่วนตัว</span><b class="price">฿400/ชม.</b></label><label class="mode"><input type="radio" name="mode" value="สถาบัน" ><span>ที่สถาบัน<small>อุดรกวดวิชา</small></span><b class="price">฿250/ชม.</b></label></fieldset>
+<label class="f">ชื่อนักเรียน<input required name="student"></label>
+<label class="f">ระดับชั้น<select name="grade"><option>ป.4</option><option>ป.5</option><option>ป.6</option><option>ม.1</option><option>ม.2</option><option>ม.3</option><option>ม.4</option><option>ม.5</option><option>ม.6</option></select></label>
+<label class="f">วิชา<select name="subject"><option>คณิตศาสตร์</option><option>ภาษาอังกฤษ</option></select></label>
+<label class="f">เบอร์โทรผู้ปกครอง<input required name="tel" inputmode="tel" pattern="0[0-9]{8,9}" placeholder="08XXXXXXXX"></label>
+<label class="f">วันและเวลาที่สะดวก<input required name="time" placeholder="เช่น เสาร์ 10.00–12.00"></label>
+<div class="row"><a class="ghost" href="#">ยกเลิก</a><button class="book">ยืนยันการจอง</button></div></form></div></div>
+<div class="modal" id="ok"><div class="dlg done"><div class="okc">✓</div><h2>ส่งคำขอจองแล้ว</h2><p id="okmsg">ครูจะติดต่อผู้ปกครองเพื่อยืนยันเวลาเรียน</p><a class="book" href="#">ปิด</a></div></div>
+<script src="script.js"></script>
+</body>
+</html>
